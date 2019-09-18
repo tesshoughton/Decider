@@ -40,11 +40,35 @@
     
         <body>
             <h2>Flip a Coin!</h2>
-            <button onclick="myFunction()">Heads or Tails</button>
+            <h3><u>Choose Heads or Tails</u></h3>
+            <button onclick="PickHeads()">Heads</button>
+            <button onclick="PickTails()">Tails</button>
+            <button onclick="FlipCoin()" style="float: right">Flip the Coin</button>
             <p id="coin"></p>
+            <p id="choice"></p>
+            <br>
+            <div>
+              <p id="result"></p>
+            </div>
             
             <script>
-              function myFunction() {
+              var heads = false;
+              var tails = false;
+              var output;
+              function PickHeads() {
+                heads = true;
+                tails = false;
+                output = "You picked Heads!";
+                document.getElementById("choice").innerHTML = output;
+              }
+              function PickTails() {
+                tails = true;
+                heads = false;
+                output = "You picked Tails!";
+                document.getElementById("choice").innerHTML = output;
+              }
+            
+              function FlipCoin() {
                 function getRandomInt(min, max) {
                   return Math.floor(Math.random() * (max - min)) + min;
                 }
@@ -59,11 +83,28 @@
                     break;
                 }
                 
-                document.getElementById("coin").style.marginLeft="10px";
-                document.getElementById("coin").style.padding="10px";
-                document.getElementById("coin").innerHTML = answer;
+                if(heads != false && tails != false) {
+                  document.getElementById("coin").style.float="right";
+                  document.getElementById("coin").style.marginTop="25px";
+                  document.getElementById("coin").innerHTML = answer;
+                }
+                
+                if(num == 1 && heads == true) {
+                  document.getElementById("result").innerHTML = "You won!";
+                }
+                else if (num == 2 && tails == true) {
+                  document.getElementById("result").innerHTML = "You won!";
+                }
+                else if (heads == false && tails == false) {
+                  document.getElementById("result").innerHTML = "Pick Heads or Tails first!";
+                }
+                else {
+                  document.getElementById("result").innerHTML = "You lost!";
+                }
               }
+              
             </script>
+            
         </body>
       </div>
       
