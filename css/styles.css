@@ -46,6 +46,14 @@ button {
    padding-bottom:60px;   /* Height of the footer */
 }
 
+#shortstraw {
+    text-align: center;
+}
+
+.img {
+    padding: 20px;
+}
+
 /* Color Theme Swatches in Hex 
 .ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-1-hex { color: #044BD9; }
 .ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-2-hex { color: #0455BF; }
