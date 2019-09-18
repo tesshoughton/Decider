@@ -1,9 +1,21 @@
 body {
     background-color: #F24405;
     font-family: 'Rambla', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     height: 100%;
+}
+
+h1 {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#welcome {
+    text-align: center;
+    color: #044BD9;
+    text-shadow: #0455BF;
+    margin: 20px;
 }
 
 /* Color Theme Swatches in Hex 
