@@ -41,13 +41,13 @@
         <body>
             <h2>Flip a Coin!</h2>
             <h3><u>Choose Heads or Tails</u></h3>
-            <button onclick="PickHeads()">Heads</button>
-            <button onclick="PickTails()">Tails</button>
+            <button onclick="PickHeads()">Choose Heads!</button>
+            <button onclick="PickTails()">Choose Tails!</button>
             <button onclick="FlipCoin()" style="float: right">Flip the Coin</button>
             <p id="coin"></p>
             <p id="choice"></p>
             <br>
-            <div>
+            <div style="text-align: center">
               <p id="result"></p>
             </div>
             
@@ -83,12 +83,15 @@
                     break;
                 }
                 
-                if(heads != false && tails != false) {
+                if((heads == false && tails ==true)
+                  || (heads == true && tails == false)) {
                   document.getElementById("coin").style.float="right";
-                  document.getElementById("coin").style.marginTop="25px";
-                  document.getElementById("coin").innerHTML = answer;
+                  document.getElementById("coin").style.marginTop="70px";
+                  document.getElementById("coin").innerHTML = "It was " + answer;
                 }
                 
+                document.getElementById("result").style.borderStyle="groove";
+                document.getElementById("result").style.borderColor="#033E8C";
                 if(num == 1 && heads == true) {
                   document.getElementById("result").innerHTML = "You won!";
                 }

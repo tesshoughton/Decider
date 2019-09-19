@@ -16,7 +16,7 @@ h2 {
 }
 
 button {
-    margin: 10px;
+    margin: 50px;
     padding: 10px;
 }
 
@@ -39,7 +39,7 @@ button {
    height: 30px;
    background-color: #FFFFFF;
    text-align: center;
-   color: #044BD9;
+   color: #093c99;
 }
 
 #body {
@@ -50,12 +50,27 @@ button {
     text-align: center;
 }
 
+#result {
+    display: inline;
+    font-size: 50px;
+}
+
+#choice {
+    font-size: 25px;
+    margin-left: 100px;
+}
+
+#coin {
+    font-size: 25px;
+    margin-right: 50px;
+}
+
 .img {
     padding: 20px;
 }
 
 /* Color Theme Swatches in Hex 
-.ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-1-hex { color: #044BD9; }
+.ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-1-hex { color: #093c99; }
 .ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-2-hex { color: #0455BF; }
 .ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-3-hex { color: #033E8C; }
 .ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-4-hex { color: #F24405; }
