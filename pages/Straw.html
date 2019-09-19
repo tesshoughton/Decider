@@ -39,7 +39,35 @@
         </nav>
     
         <body>
-            <p>Hello World</p>
+            <h2>Pick a Straw!</h2>
+            <p>
+              Determine how many straws you need and assign each option to a number between 1 and your number of straws.
+              <img class="img" src="../straws.jpg" alt="Straws in Hand"></img>
+            </p>
+            Number of Straws Needed:<br>
+            <input type="text" placeholder="e.g. 12" id="numstraws">
+            <button onclick="pickStraw()">Submit</button>
+            <p id="shortstraw"></p>
+            
+            <script>
+              function pickStraw() {
+                function getRandomNum(min, max) {
+                  return Math.floor(Math.random() * (max - min)) + min;
+                }
+                var input = document.getElementById("numstraws").value;
+                var totalstraws = parseInt(input);
+                var answer;
+                if (typeof(totalstraws) == "number") {
+                  var rand = getRandomNum(1, totalstraws);
+                  answer = rand.toString() + " got the short straw!";
+                } else {
+                  answer = "Please enter a number."
+                }
+                
+                document.getElementById("shortstraw").style.color="#044BD9";
+                document.getElementById("shortstraw").innerText = answer;
+              }
+            </script>
         </body>
       </div>
       <div id="footer">
