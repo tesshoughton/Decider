@@ -2,7 +2,7 @@ body {
     background-color: #BFD9D4;
     font-family: 'Rambla', sans-serif;
     margin: 10px;
-    height: 60px;
+    height: 100%;
 }
 
 h1 {
@@ -66,9 +66,17 @@ button {
     margin-right: 50px;
 }
 
-.img {
-    padding: 20px;
-    width: 300px;
+#strawimagep {
+    text-align: center;
+}
+
+#strawimg {
+    alignment-baseline: central;
+    width: 30%;
+}
+
+#strawdraw {
+    padding: 50px;
 }
 
 #logo {
