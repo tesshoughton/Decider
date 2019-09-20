@@ -1,5 +1,5 @@
 body {
-    background-color: #F24405;
+    background-color: #BFD9D4;
     font-family: 'Rambla', sans-serif;
     margin: 10px;
     height: 60px;
@@ -48,6 +48,7 @@ button {
 
 #shortstraw {
     text-align: center;
+    font-size: xx-large;
 }
 
 #result {
@@ -67,11 +68,17 @@ button {
 
 .img {
     padding: 20px;
+    width: 300px;
 }
 
-/* Color Theme Swatches in Hex 
-.ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-1-hex { color: #093c99; }
-.ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-2-hex { color: #0455BF; }
-.ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-3-hex { color: #033E8C; }
-.ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-4-hex { color: #F24405; }
-.ZA-SHARE-EXPO-2017:TRY-TRY-SEE-|-2017雜學校:有敢擇學-主視覺設計-5-hex { color: #F21905; } */
+#logo {
+    width: 75px;
+}
+
+/* Color Theme Swatches in Hex
+.Cement-painted-wall-background,-baby-blue-pastel-color-texture-1-hex { color: #BFD9D4; }
+.Cement-painted-wall-background,-baby-blue-pastel-color-texture-2-hex { color: #03261C; }
+.Cement-painted-wall-background,-baby-blue-pastel-color-texture-3-hex { color: #9FBFB6; }
+.Cement-painted-wall-background,-baby-blue-pastel-color-texture-4-hex { color: #41A681; }
+.Cement-painted-wall-background,-baby-blue-pastel-color-texture-5-hex { color: #8EBFAD; }
+*/
