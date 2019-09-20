@@ -42,7 +42,129 @@
              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-            <p>Hello World</p>
+
+            <div style="text-align:center">
+            <h3> Please choose ROCK, PAPER, OR SCISSORS...</h3>
+              
+            <img src="../rock.png" height="130" size = "130" onclick="Rock()"></img>
+            <img src="../paper.png" height="130" size = "130" onclick="Paper()"></img>
+            <img src="../scissors.png" height="130" size = "130" onclick="Scissors()"></img><br>
+
+            <p id="choice"></p>
+            <img id="playButton"onclick="Play()"></img><br>
+            <p id="play"></p>
+            
+            <h2 id="result"></h2>
+              
+            </div>
+            
+            <br>
+
+            
+            <script>
+              var output;
+              var player;
+              var result;
+   
+              function Rock() {
+               player = "ROCK";
+                document.getElementById("choice").innerHTML = "You picked ROCK.";
+                document.getElementById("play").innerHTML = "Click to play!";
+                document.getElementById("playButton").src = "../rockpaperscissors.png";
+                document.getElementById("playButton").size = "130";
+                document.getElementById("playButton").height = "130";
+
+              }
+              function Paper() {
+                player = "PAPER";
+                document.getElementById("choice").innerHTML = "You picked PAPER.";
+                document.getElementById("play").innerHTML = "Click to play!";
+                document.getElementById("playButton").src = "../rockpaperscissors.png";
+                document.getElementById("playButton").size = "130";
+                document.getElementById("playButton").height = "130";
+              }
+              function Scissors() {
+                player = "SCISSORS";
+                document.getElementById("choice").innerHTML = "You picked SCISSORS."
+                document.getElementById("play").innerHTML = "Click to play!";
+                document.getElementById("playButton").src = "../rockpaperscissors.png";
+                document.getElementById("playButton").size = "130";
+                document.getElementById("playButton").height = "130";
+              }
+            
+              function Play() {
+                function getRandomInt(min, max) {
+                  return Math.floor(Math.random() * (max - min)) + min;
+                }
+                var num = getRandomInt(1, 4);
+                var opponent;
+                switch (num) {
+                  case 1:
+                    opponent = "ROCK";
+                    document.getElementById("playButton").src = "../rock.png";
+                    document.getElementById("playButton").size = "130";
+                    document.getElementById("playButton").height = "130";
+                    document.getElementById("play").innerHTML = "";
+                    break;
+                  case 2:
+                    opponent = "PAPER";
+                    document.getElementById("playButton").src = "../paper.png";
+                    document.getElementById("playButton").size = "130";
+                    document.getElementById("playButton").height = "130";
+                    document.getElementById("play").innerHTML = "";
+                    break;
+                  case 3: 
+                    opponent = "SCISSORS";
+                    document.getElementById("playButton").src = "../scissors.png";
+                    document.getElementById("playButton").size = "130";
+                    document.getElementById("playButton").height = "130";
+                    document.getElementById("play").innerHTML = "";
+                    break;
+                }
+                
+                if(player == "ROCK") {
+                  if (opponent == "ROCK") {
+                    document.getElementById("result").innerHTML = "TIE. Try again!";
+                  }
+                  else if (opponent == "PAPER") {
+                    document.getElementById("result").innerHTML = "YOU LOSE. Paper beats rock!";
+                  }
+                  else if (opponent == "SCISSORS") {
+                    document.getElementById("result").innerHTML = "YOU WIN. Rock beats scissors!";
+                  }
+                  
+                }
+                
+                else if (player == "PAPER") {
+                  if (opponent == "ROCK") {
+                    document.getElementById("result").innerHTML = "YOU WIN. Paper beats rock!";
+                  }
+                  else if (opponent == "PAPER") {
+                    document.getElementById("result").innerHTML = "TIE. Try again!";
+                  }
+                  else if (opponent == "SCISSORS") {
+                    document.getElementById("result").innerHTML = "YOU LOSE. Scissors beats paper!";
+                  }
+                  
+                }
+                
+                else if (player == "SCISSORS") {
+                  if (opponent == "ROCK") {
+                    document.getElementById("result").innerHTML = "YOU LOSE. Rock beats scissors!";
+                  }
+                  else if (opponent == "PAPER") {
+                    document.getElementById("result").innerHTML = "YOU WIN. Scissors beats paper!";
+                  }
+                  else if (opponent == "SCISSORS") {
+                    document.getElementById("result").innerHTML = "TIE. Try again!";
+                  }
+                  
+                }
+              }
+              
+            </script>
+            
+            
         </body>
       </div>
       <div id="footer">
